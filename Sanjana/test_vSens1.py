@@ -1,4 +1,4 @@
-import vSens1
+from vSens1 import vSens1
 import unittest
 
 
@@ -6,7 +6,8 @@ import unittest
 class UnitT(unittest.TestCase):
 
     def setUp(self):
-        self.obj = vSens1.vSensCalculator("data1.txt",58156,5,1,1)
+        
+        self.obj = vSens1.vSensCalculator(path,58156,5,1,1)
         self.test_read_file()
 
     
@@ -45,8 +46,9 @@ class UnitT(unittest.TestCase):
         self.assertEqual(battery_count,883)
         self.assertEqual(acc_count,260030)
 
-    def test_input(self):
-        with self.assertRaises(Exception): vSens1.input_testing(58156,0,1,1)
+    def test_input(self): #test to check whether input_testing raises exception or not for negative values
+        with self.assertRaises(Exception): vSens1.input_testing(58156,-1,1,1)
     
 if __name__ == "__main__":
+    path=input("enter the lod file path for unit testing :")
     unittest.main()
