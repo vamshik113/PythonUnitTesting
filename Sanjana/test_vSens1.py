@@ -1,4 +1,4 @@
-from vSens1 import vSens1
+from vSensor import vSens1
 import unittest
 
 
@@ -46,7 +46,7 @@ class UnitT(unittest.TestCase):
         self.assertEqual(battery_count,883)
         self.assertEqual(acc_count,260030)
 
-    def test_input(self): #test to check whether input_testing raises exception or not for negative values
+    def test_input(self): #test to check whether input_testing function  raises exception or not for negative values
         with self.assertRaises(Exception): vSens1.input_testing(58156,-1,1,1)
     
 if __name__ == "__main__":
