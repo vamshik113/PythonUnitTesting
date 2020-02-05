@@ -29,7 +29,5 @@ class Test_Vsens(unittest.TestCase):
     def test_Calculate_packet_loss(self):
         self.assertAlmostEqual(self.obj.Calculate_packet_loss(5,260030,52906.87),1.7)
 
-
-
 if __name__ == '__main__':
     unittest.main()
