@@ -6,7 +6,7 @@ Created on Tue Feb  4 12:08:52 2020
 """
 
 import unittest
-from vSens_calculator1 import vSens_Calculator
+from vSens_calculator_class import vSens_Calculator
 class SimpleTest(unittest.TestCase):
     def setUp(self):
         self.obj=vSens_Calculator("806FB0AFF64C_vSens_PackeIDLog.txt",58156,5,1,1)
@@ -15,8 +15,8 @@ class SimpleTest(unittest.TestCase):
         self.assertNotEqual(len(self.obj.openfile()),0)
      
     def test_final_compute(self):
-        ans=self.obj.final_compute(100,10)
-        self.assertEqual(ans,90)
+        ans=self.obj.final_compute(58156,5249.130999999999)
+        self.assertEqual(ans,52906.869)
     
     def test_compute_data(self):
         accelerometer,temperature,battery,disconnections,connections=self.obj.compute_data()
