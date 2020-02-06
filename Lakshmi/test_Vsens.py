@@ -1,4 +1,4 @@
-import Vsens
+from files import Vsens
 import unittest
 
 class Test_Vsens(unittest.TestCase):
@@ -21,10 +21,10 @@ class Test_Vsens(unittest.TestCase):
     
     def test_input_values(self):
         self.assertRaises(ValueError,self.obj.Actual_time_calculate,-58156,5249.13)
+        self.assertRaises(ValueError,self.obj.Actual_time_calculate,0,5249.13)
         
     def test_Actual_time_calculate(self):
-        self.assertEqual(self.obj.Actual_time_calculate(-5,2),-7,3)
-
+        self.assertEqual(self.obj.Actual_time_calculate(5,2),3)
 
     def test_Calculate_packet_loss(self):
         self.assertAlmostEqual(self.obj.Calculate_packet_loss(5,260030,52906.87),1.7)
