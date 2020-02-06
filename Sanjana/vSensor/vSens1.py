@@ -80,13 +80,13 @@ class vSensCalculator:
         
 def input_testing(total_time,Accelerometer_rate,temp_rate,batterydata_rate):
     if(total_time <= 0  ):
-        raise ValueError("Total time must be graeter than zero!!!!")
+        raise Exception("Total time must be graeter than zero!!!!")
     if(Accelerometer_rate <= 0):
-       Exception('lets see if this works')
+        raise Exception('lets see if this works')
     if(temp_rate <= 0  ):
-        raise ValueError("temperature packet rate cannot be negative or zero")
+        raise Exception("temperature packet rate cannot be negative or zero")
     if(batterydata_rate <=0):
-        raise ValueError("battery packet rate cannot be negative or zero")
+        raise Exception("battery packet rate cannot be negative or zero")
 
         
 
