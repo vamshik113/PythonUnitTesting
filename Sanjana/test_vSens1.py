@@ -46,8 +46,15 @@ class UnitT(unittest.TestCase):
         self.assertEqual(battery_count,883)
         self.assertEqual(acc_count,260030)
 
-    def test_input(self):
+    def test_input(self): #test to check whether input_testing function raises exception if negative values are given as input
         self.assertRaises(Exception, vSens1.input_testing,58156,0,1,1)
+
+    def test_input(self):
+        self.assertRaises(Exception, vSens1.input_testing,58156,5,-1,1)
+
+    
+
+    
 
 
 if __name__ == "__main__":
