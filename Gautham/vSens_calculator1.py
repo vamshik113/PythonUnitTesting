@@ -57,7 +57,7 @@ class vSens_Calculator:
     def final_compute(self,input_time,time_difference):
         
         self.actual_time=float(input_time)-time_difference
-        print("Actual test time:",self.actual_time)
+        #print("Actual test time:",self.actual_time)
         return self.actual_time
     
     def get_info(self):
