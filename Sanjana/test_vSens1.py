@@ -52,11 +52,6 @@ class UnitT(unittest.TestCase):
     def test_input(self):
         self.assertRaises(Exception, vSens1.input_testing,58156,5,-1,1)
 
-    
-
-    
-
-
 if __name__ == "__main__":
     path=input("enter the lod file path for unit testing :")
     unittest.main()
